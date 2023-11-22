@@ -15,10 +15,10 @@ def get_secondary_structure(structure):
 pdb_list = PDBList()
 print(pdb_list)
 
-#arg1 = sys.argv[1] #nazwa pliku
+arg1 = sys.argv[1] #nazwa pliku
 
 #pobieranie pliku
-pdb_id = "1mbo"
+pdb_id = arg1
 
 pdb_filename = pdb_list.retrieve_pdb_file(pdb_id, pdir="data/PDB_files", file_format="pdb")
 structure = Bio.PDB.PDBParser().get_structure(pdb_id, pdb_filename)
