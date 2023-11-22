@@ -111,7 +111,7 @@ legend_handles = {} # Dictionary to store unique legend handles
 
 for i in range(len(secondary_structure)-1):
     if secondary_structure[i] == 'H':
-        label = 'Helix'
+        label = 'Alpha helix 4-12'
         color = 'red'
     elif secondary_structure[i] == 'G':
         label = '3-10 Helix'
@@ -120,10 +120,19 @@ for i in range(len(secondary_structure)-1):
         label = 'Turn'
         color = 'green'
     elif secondary_structure[i] == 'S':
+        label = 'Bend'
+        color = 'purple'
+    elif secondary_structure[i] == 'E':
+        label = 'Strand'
+        color = 'purple'
+    elif secondary_structure[i] == 'B':
+        label = 'Isolated beta-bridge residue'
+        color = 'purple'
+    elif secondary_structure[i] == 'I':
         label = 'Sheet'
         color = 'purple'
     else:
-        label = 'Other'
+        label = 'None'
         color = 'gray'
 
     # Use label and color in scatter and store handles for legend
